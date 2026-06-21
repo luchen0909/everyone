@@ -31,7 +31,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='供需协同工具V3.0',
+    name='SupplyCoordinationToolV3',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -49,12 +49,12 @@ coll = COLLECT(
     a.datas,
     strip=False,
     upx=False,
-    name='供需协同工具V3.0',
+    name='SupplyCoordinationToolV3',
 )
 
 app = BUNDLE(
     coll,
-    name='供需协同工具V3.0.app',
+    name='SupplyCoordinationToolV3.app',
     icon=None,
     bundle_identifier='com.luchen.supplycoordination.v3',
 )

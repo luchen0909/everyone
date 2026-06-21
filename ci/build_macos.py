@@ -10,7 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 APP_DIR = ROOT / "项目1"
 BALANCE_SRC = ROOT / "静态平衡表" / "src"
-APP_NAME = "供需协同工具V3.0"
+APP_NAME = "SupplyCoordinationToolV3"
+SPEC_NAME = "供需协同工具V3.0_macOS.spec"
 
 
 def run(cmd: list[str], cwd: Path | None = None) -> None:
@@ -33,7 +34,7 @@ def compile_sources() -> None:
 def main() -> None:
     requirements = APP_DIR / "requirements-macos.txt"
     template = APP_DIR / "assets" / "静态平衡表模板.xlsx"
-    spec = APP_DIR / f"{APP_NAME}_macOS.spec"
+    spec = APP_DIR / SPEC_NAME
     app_path = APP_DIR / "dist" / f"{APP_NAME}.app"
     exe_path = app_path / "Contents" / "MacOS" / APP_NAME
     artifact_dir = ROOT / "artifact"
